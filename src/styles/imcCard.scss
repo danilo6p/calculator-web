@@ -2,7 +2,8 @@
 
 .card-container {
   height: 100px;
-  width: 300px;
+  width: 100%;
+  min-width: 300px;
 
   background: $white;
   border-radius: 10px;
