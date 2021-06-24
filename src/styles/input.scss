@@ -1,0 +1,25 @@
+@import "./global.scss";
+
+.input {
+  height: 60px;
+  width: 100%;
+
+  color: $text;
+
+  border: 2px solid $lightGreen;
+  border-radius: 10px;
+
+  padding: 0 20px;
+
+  transition: border 0.2s;
+
+  &:focus {
+    border: 2px solid $darkBlue;
+
+    box-shadow: 0 2px 2px rgba($black, 0.04);
+  }
+
+  &::placeholder {
+    color: $muted;
+  }
+}

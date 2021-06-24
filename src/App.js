@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { ImcContextProvider } from './context/ImcContext';
+import { Calculate } from './pages/Calculate';
+import { Login } from './pages/Login';
+
+import './styles/global.scss'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <ImcContextProvider>
+        <Switch>
+          <Route path="/" exact component={Login} />
+          <Route path="/calculate" component={Calculate} />
+        </Switch>
+      </ImcContextProvider>
+    </BrowserRouter>
   );
 }
 
