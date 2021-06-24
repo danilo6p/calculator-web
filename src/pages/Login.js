@@ -32,8 +32,9 @@ export function Login() {
   }
 
   return (
+    <>
+    <div><Toaster/></div>
     <div id="login-page">
-      <div><Toaster/></div>
       <aside>
         <img src={loginImg} alt="" />
         <strong>Sua saúde não pode esperar!</strong>
@@ -41,7 +42,7 @@ export function Login() {
       <main>
         <div className="main-content">
           <img src={logo} alt="IMC" />
-          <button className="google-button">
+          <button className="google-button" disabled>
             <img src={googleIcon} alt="Logo Google" />
             Faça login com Google
           </button>
@@ -59,5 +60,6 @@ export function Login() {
         </div>
       </main>
     </div>
+    </>
   )
 }
