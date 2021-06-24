@@ -24,13 +24,13 @@ export function Navbar() {
         <div className="nav-menu-wrapper">
           <ul className={ click ? 'nav-menu active' : 'nav-menu'}>
             <li className="nav-item">
-              <Link path='/calculate' className="nav-link">Calcular</Link>
+              <Link to='/calculate' className="nav-link">Calcular</Link>
             </li>
             <li className="nav-item">
-              <Link path='/results' className="nav-link">Resultados</Link>
+              <Link to='/results' className="nav-link">Resultados</Link>
             </li>
             <li className="nav-item">
-              <Link path='/about' className="nav-link">Saiba mais</Link>
+              <Link to='/about' className="nav-link">Saiba mais</Link>
             </li>
           </ul>
         </div>
