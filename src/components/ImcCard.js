@@ -2,13 +2,13 @@ import { Link } from 'react-router-dom'
 
 import '../styles/imcCard.scss'
 
-export function ImcCard({imc}) {
+export function ImcCard({imc, index}) {
   return(
     <div className="card-container">
       <div className="card-header">
         {
           imc.length > 0 ? (
-            <p>IMC = {imc[imc.length - 1].weight} ÷ ({imc[imc.length - 1].height} x {imc[imc.length - 1].height})</p>
+            <p>IMC = {imc[index].weight} ÷ ({imc[index].height} x {imc[index].height})</p>
          ) : (
            <p>IMC = peso / (altura * altura)</p>
          )
@@ -17,7 +17,7 @@ export function ImcCard({imc}) {
       <div className="card-body">
         {
           imc.length > 0 ? (
-            <h1>{imc[imc.length - 1].imc}</h1>
+            <h1>{imc[index].imc}</h1>
           ) : (
             <h1>IMC</h1>
           )

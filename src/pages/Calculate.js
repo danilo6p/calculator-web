@@ -65,7 +65,7 @@ export function Calculate() {
               <Button type="submit">Calcular</Button>
             </form>
             <p className="card-text">Ultimo resultado</p>
-            <ImcCard imc={imc} />
+            <ImcCard imc={imc} index={imc.length - 1} />
           </div>
         </main>
       </div>
