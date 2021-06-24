@@ -76,8 +76,8 @@
       position: absolute;
 
       // Hidding the menu
-      left: -100%;
-      top: 100px;
+      right: 0;
+      top: -100%;
 
       opacity: 1;
       transition: all 0.5s ease;
@@ -87,7 +87,7 @@
       background: $background;
 
       // Showing up de menu
-      left: 0;
+      top: 100px;
       opacity: 1;
 
       // Above all component

@@ -1,13 +1,10 @@
 @import "./global.scss";
 
 #calculate-page {
-  width: 100%;
-  max-width: 1300px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  margin: 0 auto;
+  align-items: stretch;
+  height: 85vh;
+  width: 100%;
 
   aside {
     flex: 1;
@@ -17,7 +14,7 @@
     align-items: center;
     justify-content: center;
 
-    padding: 80px 0;
+    padding: 120px 80px 0;
 
     img {
       max-width: 295px;
@@ -39,7 +36,7 @@
     align-items: center;
     justify-content: center;
 
-    padding: 80px 0;
+    padding: 120px 80px 0;
 
     .main-content {
       max-width: 300px;
