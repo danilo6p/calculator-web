@@ -17,12 +17,12 @@ export function ImcCard({imc, index}) {
       <div className="card-body">
         {
           imc.length > 0 ? (
-            <h1>{imc[index].imc}</h1>
+            <h1>{imc[index].imc} <p>{imc.rating}</p></h1>
           ) : (
             <h1>IMC</h1>
           )
         }
-        <Link to='/results'>veja mais resultados</Link>
+        <Link to='/results'>mais resultados</Link>
       </div>
     </div>
   )

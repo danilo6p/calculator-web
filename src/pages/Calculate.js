@@ -14,6 +14,7 @@ import '../styles/calculate.scss'
 export function Calculate() {
   const [height, setHeight] = useState('')
   const [weight, setWeight] = useState('')
+  // const [rating, setRating] = useState('')
   const { user, imc, setImc } = useContext(ImcContext)
 
   function calculateImc(event) {
@@ -24,12 +25,25 @@ export function Calculate() {
       return;
     }
     else {
-      let tempHeight = (parseFloat(height)).toFixed(2)
-      let tempWeight = (parseFloat(weight)).toFixed(2)
+      let tempHeight = (parseFloat(height.replace(",", "."))).toFixed(2)
+      let tempWeight = (parseFloat(weight.replace(",", "."))).toFixed(2)
       let calculatedImc = ((tempWeight / (tempHeight * tempHeight)).toFixed(2)).toString()
+      let rating = ''
+
+      if(calculatedImc < 18.5) {
+        rating = 'Magreza'
+      } else if(calculatedImc >= 18.5 || calculatedImc <= 24.9) {
+        rating = 'Normal'
+      } else if(calculatedImc >= 25 || calculatedImc <= 29.9) {
+        rating = 'Sobrepeso'
+      } else if(calculatedImc >= 30 || calculatedImc <= 39.9) {
+        rating = 'Obesidade'
+      } else if(calculatedImc >= 40) {
+        rating = 'Obesidade Grave'
+      }
 
       toast.success('IMC Calculado')
-      let newImc = { height: height, weight: weight, imc: calculatedImc }
+      let newImc = { height: height, weight: weight, imc: calculatedImc, rating: rating }
       setImc([ ...imc, newImc ])
       console.log(imc)
       setHeight('')
@@ -43,7 +57,13 @@ export function Calculate() {
       <Navbar />
       <div id="calculate-page">
         <aside>
-          <strong>Olá, {user}</strong>
+          {
+            user.trim() !== '' ? (
+              <strong>Olá, {user}</strong>
+            ) : (
+              <strong>Olá, usuário</strong>
+            )
+          }
           <img src={calculateImg} alt="" />
         </aside>
         <main>
