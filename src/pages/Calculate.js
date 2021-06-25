@@ -43,7 +43,7 @@ export function Calculate() {
       }
 
       toast.success('IMC Calculado')
-      let newImc = { height: height, weight: weight, imc: calculatedImc, rating: rating }
+      let newImc = { height: tempHeight, weight: tempWeight, imc: calculatedImc, rating: rating }
       setImc([ ...imc, newImc ])
       console.log(imc)
       setHeight('')
@@ -56,6 +56,7 @@ export function Calculate() {
       <div><Toaster/></div>
       <Navbar />
       <div id="calculate-page">
+        <p>{imc.rating}</p>
         <aside>
           {
             user.trim() !== '' ? (
