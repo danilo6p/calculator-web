@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-import '../styles/imcCard.scss'
+import './styles.scss'
 
 export function ImcCard({imc, index}) {
   return(

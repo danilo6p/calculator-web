@@ -1,15 +1,15 @@
 import { useContext, useState } from "react"
-import { Navbar } from "../components/Navbar"
 import toast, { Toaster } from 'react-hot-toast'
 
-import { ImcContext } from '../context/ImcContext'
-import { Input } from '../components/Input'
-import { Button } from '../components/Button'
-import { ImcCard } from "../components/ImcCard"
+import { ImcContext } from '../../context/ImcContext'
+import { Navbar } from "../../components/Navbar"
+import { Input } from '../../components/Input'
+import { Button } from '../../components/Button'
+import { ImcCard } from "../../components/ImcCard"
 
-import calculateImg from '../assets/images/calculate.svg'
+import calculateImg from '../../assets/images/calculate.svg'
 
-import '../styles/calculate.scss'
+import './styles.scss'
 
 export function Calculate() {
   const [height, setHeight] = useState('')

@@ -1,13 +1,13 @@
 import { useContext } from "react"
-import { ImcContext } from "../context/ImcContext"
 import { Toaster } from "react-hot-toast"
 
-import { Navbar } from "../components/Navbar"
-import { ImcCard } from "../components/ImcCard"
+import { ImcContext } from "../../context/ImcContext"
+import { Navbar } from "../../components/Navbar"
+import { ImcCard } from "../../components/ImcCard"
 
-import resultsImg from '../assets/images/results.svg'
+import resultsImg from '../../assets/images/results.svg'
 
-import '../styles/results.scss'
+import './styles.scss'
 
 export function Results() {
   const { imc } = useContext(ImcContext)

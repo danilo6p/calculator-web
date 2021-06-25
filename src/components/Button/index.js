@@ -1,4 +1,4 @@
-import '../styles/button.scss'
+import './styles.scss'
 
 export function Button(props) {
   return (

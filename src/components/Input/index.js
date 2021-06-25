@@ -1,4 +1,4 @@
-import '../styles/input.scss'
+import './styles.scss'
 
 export function Input(props) {
   return (

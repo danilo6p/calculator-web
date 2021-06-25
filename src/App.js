@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { ImcContextProvider } from './context/ImcContext';
-import { Calculate } from './pages/Calculate';
-import { Login } from './pages/Login';
-import { Results } from './pages/Results';
+import { Calculate } from './pages/Calculate/index';
+import { Login } from './pages/Login/index';
+import { Results } from './pages/Results/index';
 
 import './styles/global.scss'
 

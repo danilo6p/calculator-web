@@ -2,16 +2,16 @@ import { useHistory } from 'react-router-dom'
 import { useState, useContext } from 'react'
 import toast, { Toaster } from 'react-hot-toast'
 
-import loginImg from '../assets/images/login.svg'
-import logo from '../assets/images/logo-v.svg'
-import googleIcon from '../assets/images/google-icon.svg'
+import loginImg from '../../assets/images/login.svg'
+import logo from '../../assets/images/logo-v.svg'
+import googleIcon from '../../assets/images/google-icon.svg'
 
-import { Input } from '../components/Input'
-import { Button } from '../components/Button'
+import { Input } from '../../components/Input'
+import { Button } from '../../components/Button'
 
-import { ImcContext } from '../context/ImcContext'
+import { ImcContext } from '../../context/ImcContext'
 
-import '../styles/login.scss'
+import './styles.scss'
 
 export function Login() {
   const [name, setName] = useState('')

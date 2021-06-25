@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'
 
 import { FaBars, FaTimes  } from 'react-icons/fa'
 
-import logo from '../assets/images/logo-h.svg'
+import logo from '../../assets/images/logo-h.svg'
 
-import '../styles/navbar.scss'
+import './styles.scss'
 
 export function Navbar() {
   const [click, setClick] = useState(false)
