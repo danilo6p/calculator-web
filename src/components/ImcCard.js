@@ -10,7 +10,7 @@ export function ImcCard({imc, index}) {
           imc.length > 0 ? (
             <p>IMC = {imc[index].weight} ÷ ({imc[index].height} x {imc[index].height})</p>
          ) : (
-           <p>IMC = peso / (altura * altura)</p>
+           <p>IMC = peso / (altura x altura)</p>
          )
         }
       </div>

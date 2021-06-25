@@ -14,6 +14,7 @@ export function Results() {
 
   return(
     <>
+    {console.log(imc)}
       <div><Toaster/></div>
       <Navbar />
       <div id="results-page">
