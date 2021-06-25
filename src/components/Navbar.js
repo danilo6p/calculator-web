@@ -17,7 +17,7 @@ export function Navbar() {
   return(
     <nav id='navbar'>
       <div className="nav-container">
-        <img src={logo} alt="IMC" />
+        <Link to='/calculate'><img src={logo} alt="IMC" /></Link>
         <div className="hamburger-menu" onClick={handleClick}>
             { click ? (<FaTimes />) : (<FaBars />)}
         </div>
