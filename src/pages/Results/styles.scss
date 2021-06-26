@@ -17,6 +17,23 @@
       font-size: 1.5rem;
       font-weight: 500;
     }
+
+    > h1 {
+      margin: 10px;
+    }
+  }
+
+  .results-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    margin: 10px auto;
+
+    > div {
+      margin: 10px;
+    }
   }
 
   .no-results {

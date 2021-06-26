@@ -32,11 +32,11 @@ export function Calculate() {
 
       if(calculatedImc < 18.5) {
         rating = 'Magreza'
-      } else if(calculatedImc >= 18.5 || calculatedImc <= 24.9) {
+      } else if(calculatedImc >= 18.5 && calculatedImc <= 24.9) {
         rating = 'Normal'
-      } else if(calculatedImc >= 25 || calculatedImc <= 29.9) {
+      } else if(calculatedImc >= 25 && calculatedImc <= 29.9) {
         rating = 'Sobrepeso'
-      } else if(calculatedImc >= 30 || calculatedImc <= 39.9) {
+      } else if(calculatedImc >= 30 && calculatedImc <= 39.9) {
         rating = 'Obesidade'
       } else if(calculatedImc >= 40) {
         rating = 'Obesidade Grave'
@@ -86,7 +86,9 @@ export function Calculate() {
               <Button type="submit">Calcular</Button>
             </form>
             <p className="card-text">Ultimo resultado</p>
-            <ImcCard imc={imc} index={imc.length - 1} />
+            <div className="card-render">
+              <ImcCard imc={imc} index={imc.length - 1} />
+            </div>
           </div>
         </main>
       </div>

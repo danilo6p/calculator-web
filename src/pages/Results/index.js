@@ -5,9 +5,9 @@ import { ImcContext } from "../../context/ImcContext"
 import { Navbar } from "../../components/Navbar"
 import { ImcCard } from "../../components/ImcCard"
 
-import resultsImg from '../../assets/images/results.svg'
+import resultsImg from "../../assets/images/results.svg"
 
-import './styles.scss'
+import "./styles.scss"
 
 export function Results() {
   const { imc } = useContext(ImcContext)
@@ -23,8 +23,8 @@ export function Results() {
           {
             imc.length > 0 ? (
               <div className="results-wrapper">
-                {imc.map((imc, key) => (
-                  <ImcCard imc={imc} index={imc.length - 1} key={key}/>
+                {imc.map((imc, key, index) => (
+                  <ImcCard imc={imc} index={index} key={key}/>
                 ))}
               </div>
             ) : (

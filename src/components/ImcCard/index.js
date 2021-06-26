@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 import './styles.scss'
 
@@ -17,12 +17,12 @@ export function ImcCard({imc, index}) {
       <div className="card-body">
         {
           imc.length > 0 ? (
-            <h1>{imc[index].imc} <p>{imc.rating}</p></h1>
+            <h1>{imc[index].imc} <span>({imc[index].rating})</span></h1>
           ) : (
             <h1>IMC</h1>
           )
         }
-        <Link to='/results'>mais resultados</Link>
+        {/* <Link to='/results'>mais resultados</Link> */}
       </div>
     </div>
   )
