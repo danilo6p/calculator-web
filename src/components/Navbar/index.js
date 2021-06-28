@@ -1,28 +1,28 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
-import { FaBars, FaTimes  } from 'react-icons/fa'
+import { FaBars, FaTimes  } from "react-icons/fa";
 
-import logo from '../../assets/images/logo-h.svg'
+import logo from "../../assets/images/logo-h.svg";
 
-import './styles.scss'
+import "./styles.scss";
 
 export function Navbar() {
-  const [click, setClick] = useState(false)
+	const [click, setClick] = useState(false);
 
-  function handleClick() {
-    setClick(!click)
-  }
+	function handleClick() {
+		setClick(!click);
+	}
 
-  return(
+	return(
     <nav id='navbar'>
       <div className="nav-container">
         <Link to='/calculate'><img src={logo} alt="IMC" /></Link>
         <div className="hamburger-menu" onClick={handleClick}>
-            { click ? (<FaTimes />) : (<FaBars />)}
+          { click ? (<FaTimes />) : (<FaBars />)}
         </div>
         <div className="nav-menu-wrapper">
-          <ul className={ click ? 'nav-menu active' : 'nav-menu'}>
+          <ul className={ click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
               <Link to='/calculate' className="nav-link">Calcular</Link>
             </li>
@@ -36,5 +36,5 @@ export function Navbar() {
         </div>
       </div>
     </nav>
-  )
+	);
 }
