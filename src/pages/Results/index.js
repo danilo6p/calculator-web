@@ -23,13 +23,13 @@ export function Results() {
           {
             imc.length > 0 ? (
               <div className="results-wrapper">
-                {imc.map((imc, key, index) => (
+                {imc.map((imc, key) => (
                   <ImcCard 
+                   key={key} 
                    imc={imc.imc}
                    height={imc.height}
                    weight={imc.weight}
-                   index={index}
-                   key={key}/>
+                   />
                 ))}
               </div>
             ) : (

@@ -16,7 +16,7 @@ export function ImcCard({imc, rating, weight, height}) {
       </div>
       <div className="card-body">
         {
-          imc.length > 0 ? <>
+          imc > 0 ? <>
             <h1>{imc} <span>({rating})</span></h1>
           </> : (
             <h1>IMC</h1>
