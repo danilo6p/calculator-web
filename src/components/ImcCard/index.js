@@ -2,13 +2,13 @@
 
 import './styles.scss'
 
-export function ImcCard({imc, index}) {
+export function ImcCard({imc, rating, weight, height}) {
   return(
     <div className="card-container">
       <div className="card-header">
         {
           imc.length > 0 ? (
-            <p>IMC = {imc[index].weight} ÷ ({imc[index].height} x {imc[index].height})</p>
+            <p>IMC = {weight} ÷ ({height} x {height})</p>
          ) : (
            <p>IMC = peso / (altura x altura)</p>
          )
@@ -16,9 +16,9 @@ export function ImcCard({imc, index}) {
       </div>
       <div className="card-body">
         {
-          imc.length > 0 ? (
-            <h1>{imc[index].imc} <span>({imc[index].rating})</span></h1>
-          ) : (
+          imc > 0 ? <>
+            <h1>{imc} <span>({rating})</span></h1>
+          </> : (
             <h1>IMC</h1>
           )
         }
